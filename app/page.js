@@ -11,7 +11,6 @@ export default function Home() {
 
   const [inventory, setInventory] = useState([]);
   const [newInventory, setNewInventory] = useState({inventory: '', quantity: ''});
-  let count = 0;
 
   //add inventory to database
   const addNewInventory = async (e) => {
@@ -41,7 +40,7 @@ export default function Home() {
       setInventory(inventoryArr);
     });
 
-  }, [])
+  }, []);
 
   //remove inventory from database
   const removeInventory = async (item) => {
