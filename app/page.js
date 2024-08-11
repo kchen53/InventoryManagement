@@ -12,6 +12,7 @@ export default function Home() {
   const [inventory, setInventory] = useState([]);
   const [newInventory, setNewInventory] = useState({inventory: '', quantity: ''});
 
+
   //add inventory to database
   const addNewInventory = async (e) => {
     e.preventDefault();
@@ -39,6 +40,8 @@ export default function Home() {
       })
       setInventory(inventoryArr);
     });
+
+    console.log(window.innerWidth);
 
   }, []);
 
@@ -157,4 +160,5 @@ export default function Home() {
 
     </>
   );
-}
+};
+
